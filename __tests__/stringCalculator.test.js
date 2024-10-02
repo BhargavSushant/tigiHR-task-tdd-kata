@@ -29,3 +29,9 @@ test("handle new lines between numbers", () => {
   const calculator = new StringCalculator();
   expect(calculator.add("1\n1,3")).toBe(5);
 });
+
+// test for handling
+test("handle new lines between numbers", () => {
+  const calculator = new StringCalculator();
+  expect(calculator.add("//;\n1;2")).toBe(3);
+});
