@@ -27,5 +27,5 @@ test("returns sum of Unknown Numbers", () => {
 // test for handling new lines between numbers
 test("handle new lines between numbers", () => {
   const calculator = new StringCalculator();
-  expect(calculator.add("1\n1,3").toBe(5));
+  expect(calculator.add("1\n1,3")).toBe(5);
 });
