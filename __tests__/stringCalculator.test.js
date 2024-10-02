@@ -35,3 +35,16 @@ test("handle new lines between numbers", () => {
   const calculator = new StringCalculator();
   expect(calculator.add("//;\n1;2")).toBe(3);
 });
+
+// test for Negarive numbers
+test("throws an exception for negative numbers", () => {
+  const calculator = new StringCalculator();
+  expect(() => calculator.add("1,-2")).toThrow("negatives not allowed: -2");
+});
+
+test("throws an exception with all negative numbers", () => {
+  const calculator = new StringCalculator();
+  expect(() => calculator.add("1,-2,-3")).toThrow(
+    "negatives not allowed: -2,-3"
+  );
+});
