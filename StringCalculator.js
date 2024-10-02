@@ -19,6 +19,12 @@ class StringCalculator {
       .map(Number);
     // console.log(inputArr);
 
+    // Handling negative numbers
+    const negative = inputArr.filter((num) => num < 0);
+    if (negative.length > 0) {
+      throw new Error("Negatives not allowed");
+    }
+
     return inputArr.reduce((sum, num) => sum + num, 0);
   }
 }
