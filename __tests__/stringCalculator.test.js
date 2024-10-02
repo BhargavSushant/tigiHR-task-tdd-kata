@@ -22,5 +22,5 @@ test("returns the sum of two numbers", () => {
 
 test("returns sum of Unknown Numbers", () => {
   const calculator = new StringCalculator();
-  expect(calculator.add("1,2,3,4").toBe(10));
+  expect(calculator.add("1,2,3,4")).toBe(10);
 });
