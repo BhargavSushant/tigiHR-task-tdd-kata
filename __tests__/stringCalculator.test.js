@@ -48,3 +48,8 @@ test("throws an exception with all negative numbers", () => {
     "negatives not allowed: -2,-3"
   );
 });
+
+test("ignores numbers greater than 1000", () => {
+  const calculator = new StringCalculator();
+  expect(calculator.add("2,1001")).toBe(2);
+});
