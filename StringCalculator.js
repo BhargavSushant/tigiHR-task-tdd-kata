@@ -40,7 +40,7 @@ class StringCalculator {
     // Handling negative numbers
     const negative = inputArr.filter((num) => num < 0);
     if (negative.length > 0) {
-      throw new Error("Negatives not allowed");
+      throw new Error(`negatives not allowed: ${negative.join(",")}`);
     }
 
     // Ignore numbers >= 1000
