@@ -19,8 +19,13 @@ test("returns the sum of two numbers", () => {
 });
 
 //test for unknown amount of numbers.
-
 test("returns sum of Unknown Numbers", () => {
   const calculator = new StringCalculator();
   expect(calculator.add("1,2,3,4")).toBe(10);
+});
+
+// test for handling new lines between numbers
+test("handle new lines between numbers", () => {
+  const calculator = new StringCalculator();
+  expect(calculator.add("1\n1,3").toBe(5));
 });
