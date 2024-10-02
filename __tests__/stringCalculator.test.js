@@ -17,3 +17,10 @@ test("returns the sum of two numbers", () => {
   const calculator = new StringCalculator();
   expect(calculator.add("1,2")).toBe(3);
 });
+
+//test for unknown amount of numbers.
+
+test("returns sum of Unknown Numbers", () => {
+  const calculator = new StringCalculator();
+  expect(calculator.add("1,2,3,4").toBe(10));
+});
