@@ -5,7 +5,7 @@ class StringCalculator {
     }
 
     // handle one or more inputs
-    const inputArr = numbers.split(",").map(Number);
+    const inputArr = numbers.replace(/\n/g, ",").split(",").map(Number);
     return inputArr.reduce((sum, num) => sum + num, 0);
   }
 }
